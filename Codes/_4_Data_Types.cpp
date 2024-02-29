@@ -58,40 +58,98 @@ void dataTypes(int a, float b, double c, long long l, string d){
     // to help you understand data types
     // Please complete the same for correct result
     // Or you can delete and write your own
-    float p = b/c ; //do b/c
+    // float Keyword `float` specifies the data type.
+    // p Identifier `p` is the variable to store the result of the division.
+    float p = b / c ; //do b/c
     
-    double q =  b/a; //do b/a
+    // double Keyword `double` specifies the data type.
+    // q Identifier `q` is the variable to store the result of the division.
+    double q =  b / a; //do b/a
     
-    int r =   c/a; //do c/a
+    // int Keyword `int` specifies the data type.
+    // r Identifier `r` is the variable to store the result of the division.
+    int r =   c / a; //do c/a
     
-    long long m = r+l ; //do r+l
+    // long Keyword `long` specifies the data type.
+    // long long Keyword `long long` specifies the data type for larger integers.
+    // m Identifier `m` is the variable to store the sum of two integers.
+    long long m = r + l ; //do r+l
     
+    //cout Keyword `cout` is used to print output to the console.
+    //<< Keyword `<<` is used to insert data into the output stream.
+    //p Identifier `p` is the variable containing the result of the division.
+    //q Identifier `q` is the variable containing the result of the division.
+    //r Identifier `r` is the variable containing the result of the division.
+    //m Identifier `m` is the variable containing the sum of two integers.
+    //endl Identifier `endl` represents the end of a line in the output stream.
     cout << p << " " << q << " " << r <<" "<< m <<endl;
     
+    //cout Keyword `cout` is used to print output to the console.
+    //<< Keyword `<<` is used to insert data into the output stream.
+    //d Identifier `d` is the variable containing the string.
+    //d[3] Identifier `d[3]` represents the character at index 3 in the string.
     cout << d << " " << d[3] << endl; //write 3 for index
 
 }
 
 //{ Driver Code Starts.
  
+//int Keyword `int` specifies the data type.
+//main Identifier `main` is the name of the main function.
 int main()
 {
+    //int Keyword `int` specifies the data type.
+    //a Identifier `a` is the variable to store an integer.
     int a;
+    //float Keyword `float` specifies the data type.
+    //b Identifier `b` is the variable to store a floating-point number.
     float b;
+    //double Keyword `double` specifies the data type.
+    //c Identifier `c` is the variable to store a double precision floating-point number.
     double c;
+    //long Keyword `long` specifies the data type.
+    //long long Keyword `long long` specifies the data type for larger integers.
+    //l Identifier `l` is the variable to store a long long integer.
     long long l;
+    //string Keyword `string` specifies the data type.
+    //d Identifier `d` is the variable to store a string.
     string d;
     
+    //int Keyword `int` specifies the data type.
+    //t Identifier `t` is the variable to store the number of test cases.
     int t;
+    //cin Keyword `cin` is used to take input from the user.
+    //>> Operator `>>` is used to extract input from the input stream.
     cin >> t;
     
+    //while Keyword `while` is used to create a loop that executes a block of code as long as the condition is true.
+    //() Parentheses `()` are used to enclose the condition.
     while(t--){
         
+        //cin Keyword `cin` is used to take input from the user.
+        //>> Operator `>>` is used to extract input from the input stream.
+        //a Identifier `a` is the variable to store an integer.
+        //b Identifier `b` is the variable to store a floating-point number.
+        //c Identifier `c` is the variable to store a double precision floating-point number.
+        //l Identifier `l` is the variable to store a long long integer.
+        //d Identifier `d` is the variable to store a string.
         cin >> a >> b >> c >> l >> d;
     
+        //dataTypes Identifier `dataTypes` is the name of the function.
+        //a Identifier `a` is passed as an argument to the function.
+        //b Identifier `b` is passed as an argument to the function.
+        //c Identifier `c` is passed as an argument to the function.
+        //l Identifier `l` is passed as an argument to the function.
+        //d Identifier `d` is passed as an argument to the function.
         dataTypes(a, b, c, l, d);
     }
     
+    //return Keyword `return` signifies the end of the function and returns a value.
+    //0 Literal `0` represents a numerical value.
     return 0;
+// } Keyword `}` denotes the end of a block of code.
 } 
-// } Driver Code Ends
+// } Keyword `}` denotes the end of a block of code.
+// Driver Keyword `Driver` indicates that this is the driver code.
+//Code Keyword `Code` specifies the segment of code.
+//Ends Keyword `Ends` signifies the conclusion.

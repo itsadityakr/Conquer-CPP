@@ -16,7 +16,7 @@ Output:
 Explanation:
 Value of a/b is printed with and 
 without decimal precision.
- 
+
 
 User Task:
 Your task is to complete the provided function.
@@ -26,40 +26,50 @@ Constraints:
 */
 
 /*__________________________PROGRAM__________________________*/
-//{ Driver Code Starts
+///{ Driver Code Starts
 //Initial Template for C++
-
-
-
 #include <bits/stdc++.h>
-using namespace std;
+
+// Include all standard C++ libraries
+#define MULTI(a,b) (a*b) //The multiplication macro function.
+/*Whenever MULTI(a,b) is encountered, it is replaced by (a*b) during the preprocessing stage*/
+
+using namespace std; // Namespace declaration to avoid writing std:: before standard C++ functions
+
+// Function prototype declaration
+void macros(int a, int b);
+
 
 // } Driver Code Ends
 //User function Template for C++
 
-void precise(float a, float b)
+// Function definition for macros
+void macros(int a, int b)
 {
-    //perform a/b
-    float c = a/b;
-    cout<</*output the result of a/b here*/c<<" "<</*use setprecision(3) here*/setprecision(3)<</*use fixed here*/fixed<</*Output c here*/c<<endl;
-    
-    cout<<endl;
+    // See the macro defined at the top of the code. Use that macro to find a*b
+    // Use only macro to complete this task
+    // Output the result of a*b using the defined macro
+    cout << MULTI(a, b) << endl;
 }
 
 //{ Driver Code Starts.
-void precise(float , float );//prototype
 
-//Driver Code
+
+// Main function
 int main() {
-	int t;
-	cin>>t;
-	while(t--)
-	{
-	    float a,b;
-	    cin>>a>>b; //Taking input of a and b in floating types
-	    precise(a,b);
-	    
-	}
-	return 0;
+    int t;
+    cin>>t; // Input the number of test cases
+    while(t--)
+    {
+        int a,b;
+
+        // Input a and b
+        cin>>a>>b; 
+
+        // Function call to macros function
+        macros(a,b); // Call the macros function to perform the multiplication
+
+    }
+    return 0; // Return 0 to indicate successful execution
 }
 // } Driver Code Ends

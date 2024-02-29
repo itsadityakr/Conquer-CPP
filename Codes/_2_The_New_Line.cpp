@@ -38,18 +38,19 @@ void printNewLine();
 // Function to print each word in new line
 
 void printNewLine(){
-    
-    cout<<"Geeks"<<endl<<"for"<<endl<<"Geeks"<<endl;
+
+    cout << "Geeks" << endl; // Print "Geeks" followed by a newline
+    cout << "for" << endl;   // Print "for" followed by a newline
+    cout << "Geeks" << endl; // Print "Geeks" followed by a newline
     
 }
 
 //{ Driver Code Starts.
 
 int main(){
-    
-    //function call
-    printNewLine();
-    
-}
 
+    // Function call to print each word in new line
+    printNewLine();
+
+}
 // } Driver Code Ends
