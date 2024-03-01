@@ -6,20 +6,19 @@ bool check(long long n) {
     long long squareRootOfN = sqrt(n);
     return squareRootOfN * squareRootOfN == n;
 }
-
 long long nearestPerfectSquare(long long n) {
     if (check(n)) {
-        long long closestPSlessThanN = sqrt(n) - 1;
-        return closestPSlessThanN * closestPSlessThanN;
+        long long psLn = sqrt(n) - 1;
+        return psLn * psLn;
     } else {
-        long long closestPSlessThanN = sqrt(n);
-        long long closestPSgreaterThanN = closestPSlessThanN + 1;
-        long long squareLessThanN = closestPSlessThanN * closestPSlessThanN;
-        long long squareGreaterThanN = closestPSgreaterThanN * closestPSgreaterThanN;
-        if (abs(n - squareLessThanN) <= abs(n - squareGreaterThanN)) {
-            return squareLessThanN;
+        long long psLn = sqrt(n);
+        long long psGn = psLn + 1;
+        long long sqLn = psLn * psLn;
+        long long sqGn = psGn * psGn;
+        if (abs(n - sqLn) <= abs(n - sqGn)) {
+            return sqLn;
         } else {
-            return squareGreaterThanN;
+            return sqGn;
         }
     }
 }
