@@ -49,10 +49,50 @@ using namespace std;
 // } Driver Code Ends
 //User function Template for C++
 
-void rollingHash(string s, string p)
-{
-    
+void rollingHash(string s, string p) {
+    // If length of pattern is greater than length of string,
+    // it's not possible to find any match
+    if (p.length() > s.length()) {
+        cout << -1 << endl; // Print -1 to indicate no match found
+    } else {
+        bool flag = false; // A flag to track if any match is found
+        int hash = 0; // Hash value of the pattern
+        // Calculate the hash value of the pattern
+        for (int i = 0; i < p.length(); i++) {
+            hash += (int)(p[i] - 'a') + 1; // 'a' has value 1, 'b' has value 2, and so on
+        }
+
+        int current_hash = 0; // Hash value of the current substring of the string
+        // Calculate the hash value of the first substring of length equal to pattern
+        for (int i = 0; i < p.length(); i++) {
+            current_hash += (int)(s[i] - 'a') + 1;
+        }
+        // If the hash value of the first substring matches with the hash value of the pattern
+        if (current_hash == hash) {
+            // Print the first matching substring and its index (0-based)
+            cout << s.substr(0, p.length()) << " " << 0 << endl;
+            flag = true; // Set flag to true to indicate a match is found
+        }
+
+        // Iterate through the rest of the string
+        for (int i = 1; i + p.length() - 1 < s.length() && i < s.length(); i++) {
+            // Update the hash value of the current substring by removing the contribution of the first character
+            // and adding the contribution of the next character
+            current_hash += (int)(s[i + p.length() - 1] - 'a') + 1 - ((int)(s[i - 1] - 'a') + 1);
+            // If the hash value of the current substring matches with the hash value of the pattern
+            if (current_hash == hash) {
+                // Print the matching substring and its index (0-based)
+                cout << s.substr(i, p.length()) << " " << i << endl;
+                flag = true; // Set flag to true to indicate a match is found
+            }
+        }
+        // If no match is found, print -1
+        if (!flag) {
+            cout << -1 << endl;
+        }
+    }
 }
+
 
 //{ Driver Code Starts.
 
